@@ -18,7 +18,7 @@
   --mono: "Oxygen mono", monospace;
   --sans: Oxygen, sans-serif;
 }
-/* border box model: https://css-tricks.com/box-sizing/ */
+
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -56,6 +56,7 @@ a:hover {
 img {
   width: 100%;
 }
+
 /* background color divs */
 .intro,
 footer {
@@ -102,6 +103,22 @@ footer {
   font-size: 4rem;
 }
 
+@media only screen and (max-width: 768px) {
+  .intro {
+    flex-direction: column;
+    margin-left: 0;
+  }
+  .img-me {
+    padding: 2rem;
+  }
+  .intro-txt {
+    padding: 2rem;
+  }
+  .greet span {
+    font-size: 3rem;
+  }
+}
+
 /* About section styles */
 #About {
   margin-left: 0 auto;
@@ -122,7 +139,6 @@ footer {
 /* Contacts section styles */
 #contacts {
   font-family: var(--mono);
-  /* color: var(--white); */
   text-align: center;
   margin: 0 auto;
   padding: 4rem 0;
@@ -297,9 +313,6 @@ footer p {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  /* background-color: #111; */
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   width: 400px;
   margin-left: 3rem;
 }
@@ -333,7 +346,6 @@ footer p {
 }
 
 #contact-form button:hover {
-  /* background-color: black; */
   transform: rotate(5deg);
   cursor: pointer;
 }
