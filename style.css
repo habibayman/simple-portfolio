@@ -1,4 +1,3 @@
-/* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
 :root {
   --black: #171321;
   --dkblue: #275271;
@@ -103,7 +102,7 @@ footer {
   font-size: 4rem;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 950px) {
   .intro {
     flex-direction: column;
     margin-left: 0;
@@ -308,13 +307,19 @@ footer p {
   font-size: 0.8rem;
 }
 
-/* */
+@media only screen and (max-width: 950px) {
+  footer ul {
+    font-size: 2rem;
+  }
+}
+
+/* Contacts styles */
 #contact-form {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  width: 400px;
   margin-left: 3rem;
+  width: 80%; /* Adjust the width for smaller screens */
 }
 
 #contact-form input,
@@ -330,7 +335,6 @@ footer p {
 
 #contact-form textarea {
   height: 100px;
-  width: 600px;
 }
 
 #contact-form button {
@@ -353,4 +357,14 @@ footer p {
 #contact-form label {
   color: #fff;
   margin-bottom: 5px;
+}
+
+@media (max-width: 950px) {
+  #contact-form {
+    width: 90%;
+  }
+
+  #contact-form textarea {
+    height: 150px;
+  }
 }
