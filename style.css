@@ -1,0 +1,344 @@
+/* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
+:root {
+  --black: #171321;
+  --dkblue: #275271;
+  --plum: #450943;
+  --lightpink: #f0a8d0;
+  --darkpink: #c75b7a;
+  --palepink: #dbb5b5;
+  --aqua: #86fbfb;
+  --white: #f7f8fa;
+  --pink: #f7b5ca;
+  --gradient: linear-gradient(
+    90deg,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  --font-size: 1.3rem;
+  --mono: "Oxygen mono", monospace;
+  --sans: Oxygen, sans-serif;
+}
+/* border box model: https://css-tricks.com/box-sizing/ */
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--sans);
+  color: var(--white);
+  background-color: var(--black);
+  font-size: var(--font-size);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+a {
+  color: var(--darkpink);
+}
+a:hover {
+  color: var(--lightpink);
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+/* background color divs */
+.intro,
+footer {
+  background-color: var(--black);
+}
+.gradient {
+  background: var(--gradient);
+  height: 5px;
+}
+
+/* intro styles */
+.intro {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 2rem;
+}
+
+.img-me img {
+  border-radius: 200px;
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+}
+
+.img-me {
+  margin: 1px;
+  padding: 7rem 4rem 5rem 7rem;
+}
+
+.intro-txt {
+  margin-left: 0 auto;
+  padding: 4rem 1rem 4rem 1rem;
+  line-height: 1.5;
+}
+
+.intro-txt .greet {
+  font-family: var(--mono);
+}
+
+.greet span {
+  display: block;
+  font-family: var(--sans);
+  color: var(--aqua);
+  font-size: 4rem;
+}
+
+/* About section styles */
+#About {
+  margin-left: 0 auto;
+  padding: 0rem 1rem 6rem 2rem;
+  line-height: 1.5;
+}
+
+#About .tech {
+  padding-top: 2rem;
+  line-height: 2rem;
+}
+
+#About .fa-pinterest {
+  padding-top: 1rem;
+  font-size: 3rem;
+}
+
+/* Contacts section styles */
+#contacts {
+  font-family: var(--mono);
+  /* color: var(--white); */
+  text-align: center;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+#contacts h2 {
+  color: var(--darkpink);
+}
+
+/* navbar styles */
+nav {
+  font-family: var(--mono);
+  font-size: 80%;
+  padding: 1rem;
+}
+nav ul {
+  font-family: var(--sans);
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+nav li:first-child {
+  flex-basis: auto;
+  text-align: center;
+}
+nav h1 [class*="fa-"] {
+  font-size: 100%;
+  color: var(--pink);
+}
+nav [class*="fa-"] {
+  font-size: 150%;
+}
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  display: block;
+}
+
+.button-resume {
+  background-color: var(--lightpink);
+  padding: 8px;
+  border-radius: 8px;
+}
+.button-resume:hover {
+  background-color: var(--white);
+  color: var(--lightpink);
+}
+
+/* responsive screen width */
+@media (min-width: 850px) {
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  nav li:first-child {
+    text-align: left;
+    margin-right: auto;
+  }
+}
+
+/* Projects section styles */
+#Projects {
+  padding: 4rem 1rem;
+}
+#Projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: calc(2.5rem * 1.5);
+}
+#Projects h4 {
+  color: var(--aqua);
+  font-family: var(--mono);
+}
+.description-box {
+  padding: 1rem;
+  background-color: var(--plum);
+  border-radius: 5px;
+  line-height: 1.5;
+}
+#Projects ul {
+  display: flex;
+  margin: 0;
+  padding: 1rem0;
+  flex-flow: row wrap;
+  justify-items: flex-start;
+  gap: 1.5rem;
+  font-size: 1rem;
+}
+#Projects img {
+  margin: 3rem 0 3rem 0rem;
+  padding: 1rem;
+  border-left: 1.5px solid var(--white);
+  border-top: 1.5px solid var(--white);
+  border-radius: 25px;
+}
+@media (min-width: 550px) {
+  article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .project .description {
+    order: 2;
+  }
+}
+.reverse-project {
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+}
+.project-02 .description-box {
+  background-color: 20316c;
+}
+
+/* Skills styles */
+
+#skills {
+  padding-bottom: 4rem;
+}
+
+#skills h2 {
+  padding: 4rem 0 1.5rem 2rem;
+}
+
+#skills ul {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 4rem;
+}
+#skills li {
+  width: 85px;
+  height: 85px;
+  transition: transform 0.3s ease-in-out;
+}
+
+#skills li:hover {
+  transform: translate(10px, 10px);
+}
+
+/* footer styles */
+footer {
+  margin: 0 auto;
+  padding: 2rem 0;
+  text-align: center;
+  font-family: var(--mono);
+}
+footer ul {
+  list-style-type: none;
+  padding: 2rem 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 4rem;
+  font-size: 3rem;
+}
+footer p {
+  font-size: 0.8rem;
+}
+
+/* */
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  /* background-color: #111; */
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  margin-left: 3rem;
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: #222;
+  color: #fff;
+  outline: none;
+}
+
+#contact-form textarea {
+  height: 100px;
+  width: 600px;
+}
+
+#contact-form button {
+  padding: 15px 30px;
+  background-color: var(--lightpink);
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100px;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+}
+
+#contact-form button:hover {
+  /* background-color: black; */
+  transform: rotate(5deg);
+  cursor: pointer;
+}
+
+#contact-form label {
+  color: #fff;
+  margin-bottom: 5px;
+}
