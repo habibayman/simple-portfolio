@@ -1,4 +1,5 @@
 "use strict";
+
 (() => {
   (function () {
     emailjs.init("Hc68ZzPsz7Hq0UtuB");
@@ -20,3 +21,15 @@ document
       }
     );
   });
+
+let lastScroll;
+const navbar = document.querySelector("nav");
+
+window.addEventListener("scroll", function () {
+  const currScroll = window.scrollY || document.documentElement.scrollTop;
+
+  navbar.style.top = currScroll > lastScroll ? "-80px" : "0";
+  console.log(navbar.style.top);
+
+  lastScroll = currScroll;
+});

@@ -74,6 +74,10 @@ footer {
   margin-left: 2rem;
 }
 
+#myName:hover {
+  filter: drop-shadow(0 0 15px var(--palepink));
+}
+
 .img-me img {
   border-radius: 200px;
   width: 350px;
@@ -152,6 +156,11 @@ nav {
   font-family: var(--mono);
   font-size: 80%;
   padding: 1rem;
+  background-color: var(--black);
+
+  position: sticky;
+  width: 100%;
+  overflow: hidden;
 }
 nav ul {
   font-family: var(--sans);
@@ -197,7 +206,7 @@ nav a {
 /* responsive screen width */
 @media (min-width: 850px) {
   nav {
-    max-width: 1200px;
+    max-width: 1257px;
     margin: 0 auto;
   }
   nav li:first-child {
