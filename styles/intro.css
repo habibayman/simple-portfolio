@@ -1,0 +1,77 @@
+/* intro styles */
+.intro {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 2rem;
+}
+
+#myName:hover {
+  filter: drop-shadow(0 0 15px var(--palepink));
+}
+
+.img-me img {
+  border-radius: 200px;
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  filter: drop-shadow(0 0 7px var(--palepink));
+}
+
+.img-me {
+  margin: 1px;
+  padding: 7rem 4rem 5rem 7rem;
+}
+
+.img-me img:hover {
+  filter: drop-shadow(0 0 15px var(--palepink));
+}
+
+.intro-txt {
+  margin-left: 0 auto;
+  padding: 4rem 1rem 4rem 1rem;
+  line-height: 1.5;
+}
+
+.intro-txt .greet {
+  font-family: var(--mono);
+}
+
+.greet span {
+  display: block;
+  font-family: var(--sans);
+  color: var(--aqua);
+  font-size: 4rem;
+}
+
+@media only screen and (max-width: 950px) {
+  .intro {
+    flex-direction: column;
+    margin-left: 0;
+  }
+  .img-me {
+    padding: 2rem;
+  }
+  .intro-txt {
+    padding: 2rem;
+  }
+  .greet span {
+    font-size: 3rem;
+  }
+}
+
+/* About section styles */
+#About {
+  margin-left: 0 auto;
+  padding: 0rem 1rem 6rem 2rem;
+  line-height: 1.5;
+}
+
+#About .tech {
+  padding-top: 2rem;
+  line-height: 2rem;
+}
+
+#About .fa-pinterest {
+  padding-top: 1rem;
+  font-size: 3rem;
+}

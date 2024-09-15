@@ -1,0 +1,34 @@
+/* Skills styles */
+#skills {
+  padding-bottom: 4rem;
+}
+
+#skills h2 {
+  padding: 4rem 0 1.5rem 2rem;
+}
+
+#skills ul {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 4rem;
+}
+#skills li {
+  width: 85px;
+  height: 85px;
+  transition: transform 0.3s ease-in-out;
+}
+
+#skills li:hover {
+  transform: translate(10px, 10px);
+}
+
+@media only screen and (max-width: 950px) {
+  #skills ul {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}

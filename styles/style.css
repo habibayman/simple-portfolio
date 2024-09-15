@@ -1,0 +1,89 @@
+:root {
+  --black: #171321;
+  --dkblue: #275271;
+  --plum: #450943;
+  --lightpink: #f0a8d0;
+  --darkpink: #c75b7a;
+  --palepink: #dbb5b5;
+  --aqua: #86fbfb;
+  --white: #f7f8fa;
+  --pink: #f7b5ca;
+  --gradient: linear-gradient(
+    90deg,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  --font-size: 1.3rem;
+  --mono: "Oxygen mono", monospace;
+  --sans: Oxygen, sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--sans);
+  color: var(--white);
+  background-color: var(--black);
+  font-size: var(--font-size);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+a {
+  color: var(--darkpink);
+}
+a:hover {
+  color: var(--lightpink);
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.gradient {
+  background: var(--gradient);
+  height: 5px;
+}
+
+/* footer styles */
+footer {
+  margin: 0 auto;
+  padding: 2rem 0;
+  text-align: center;
+  font-family: var(--mono);
+}
+footer ul {
+  list-style-type: none;
+  padding: 2rem 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 4rem;
+  font-size: 3rem;
+}
+footer p {
+  font-size: 0.8rem;
+}
+
+@media only screen and (max-width: 950px) {
+  footer ul {
+    font-size: 2rem;
+  }
+}

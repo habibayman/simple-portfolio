@@ -1,0 +1,51 @@
+/* Projects section styles */
+#Projects {
+  padding: 4rem 1rem;
+}
+#Projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: calc(2.5rem * 1.5);
+}
+#Projects h4 {
+  color: var(--aqua);
+  font-family: var(--mono);
+}
+.description-box {
+  padding: 1rem;
+  background-color: var(--plum);
+  border-radius: 5px;
+  line-height: 1.5;
+}
+#Projects ul {
+  display: flex;
+  margin: 0;
+  padding: 1rem0;
+  flex-flow: row wrap;
+  justify-items: flex-start;
+  gap: 1.5rem;
+  font-size: 1rem;
+}
+#Projects img {
+  margin: 3rem 0 3rem 0rem;
+  padding: 1rem;
+  border-left: 1.5px solid var(--white);
+  border-top: 1.5px solid var(--white);
+  border-radius: 25px;
+}
+@media (min-width: 550px) {
+  article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .project .description {
+    order: 2;
+  }
+}
+.reverse-project {
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+}
+.project-02 .description-box {
+  background-color: 20316c;
+}
